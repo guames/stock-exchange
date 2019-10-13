@@ -1,36 +1,82 @@
 <template>
-  <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
+  <v-app id="inspire">
+
+    <v-app-bar
+            app
+            color="blue-grey"
+            dark
+    >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>Toolbar</v-toolbar-title>
     </v-app-bar>
 
+    <v-navigation-drawer
+            v-model="drawer"
+            app
+    >
+      <v-list dense>
+        <v-list-item>
+          <v-list-item-action>
+            <v-icon>mdi-coin</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Stocks</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-action>
+            <v-icon>mdi-chart-line</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Graphics</v-list-item-title>
+            <v-list-item-title></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-action>
+            <v-icon>mdi-file-document-box-multiple-outline</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Reports</v-list-item-title>
+            <v-list-item-title></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+
     <v-content>
-      <HelloWorld/>
+      <v-container
+              class="fill-height"
+              fluid
+      >
+        <v-row
+                justify="center"
+                align="center"
+        >
+        </v-row>
+      </v-container>
     </v-content>
+
+    <v-footer
+            app
+            color="blue-grey"
+            class="white--text"
+    >
+      <span>GuAmes FullStack Developer</span>
+      <v-spacer></v-spacer>
+      <span>&copy; 2019</span>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-  },
-  data: () => ({
-    //
-  }),
-};
+  export default {
+    props: {
+      source: String,
+    },
+    data: () => ({
+      drawer: false,
+    }),
+  }
 </script>
