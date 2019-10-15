@@ -1,6 +1,3 @@
 module.exports = {
-  presets: [
-    ["es2015", {"modules": false}],
-    ["stage-2"]
-  ]
+  presets: ["@babel/preset-env"]
 }

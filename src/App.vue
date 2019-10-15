@@ -54,6 +54,7 @@
                 justify="center"
                 align="center"
         >
+          <router-view></router-view>
         </v-row>
       </v-container>
     </v-content>
