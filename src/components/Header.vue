@@ -1,10 +1,9 @@
 <template>
-    <h1>The Header Component</h1>
+    <h1>Component Header</h1>
 </template>
 
 <script>
     export default {
-        name: "Header"
     }
 </script>
 
