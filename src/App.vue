@@ -7,7 +7,7 @@
             dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Toolbar</v-toolbar-title>
+      <v-toolbar-title>Book & Stock </v-toolbar-title>
     </v-app-bar>
 
     <v-navigation-drawer
@@ -15,7 +15,7 @@
             app
     >
       <v-list dense>
-        <v-list-item>
+        <v-list-item :to="{path: '/'}" >
           <v-list-item-action>
             <v-icon>mdi-home</v-icon>
           </v-list-item-action>
@@ -23,7 +23,7 @@
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item :to="{path: '/stocks'}">
           <v-list-item-action>
             <v-icon>mdi-coin</v-icon>
           </v-list-item-action>
@@ -31,7 +31,7 @@
             <v-list-item-title>Stocks</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item :to="{path: '/graphics'}">
           <v-list-item-action>
             <v-icon>mdi-chart-line</v-icon>
           </v-list-item-action>
@@ -40,7 +40,7 @@
             <v-list-item-title></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item :to="{path: '/reports'}">
           <v-list-item-action>
             <v-icon>mdi-file-document-box-multiple-outline</v-icon>
           </v-list-item-action>
